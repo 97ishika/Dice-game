@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
 
-<head>
-  <meta charset="utf-8">
-  <title>Dicee</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
 
-</head>
+var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
 
-<body>
+var image1 = document.querySelectorAll("img")[0];
 
-  <div class="container">
-    <h1>Refresh Me</h1>
+image1.setAttribute("src", randomImageSource);
 
-    <div class="dice">
-      <p>Player 1</p>
-      <img class="img1" src="I:\Web development\Dicee Challenge - Starting Files\images\dice6.png">
-    </div>
 
-    <div class="dice">
-      <p>Player 2</p>
-      <img class="img2" src="I:\Web development\Dicee Challenge - Starting Files\images\dice6.png">
-    </div>
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
-  </div>
+var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 
-  <script src="I:\Web development\Dicee Challenge - Starting Files\index.js" />
-  </script>
-</body>
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
 
-<footer>
-  With 💜 WebDevFrau
-</footer>
 
-</html>
+//If player 1 wins
+if (randomNumber1 > randomNumber2) {
+  document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!";
+} else if (randomNumber2 > randomNumber1) {
+  document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+} else {
+  document.querySelector("h1").innerHTML = "Draw!";
+}
