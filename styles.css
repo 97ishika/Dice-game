@@ -10,8 +10,8 @@
 
 }
 
-body {
-  background-color: #393E46;
+body{
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 h1 {
@@ -19,13 +19,14 @@ h1 {
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
   font-size: 8rem;
-  color: #4ECCA3;
+  color: #51c2d5;
 }
 
 p {
   font-size: 2rem;
-  color: #4ECCA3;
+  color: #51c2d5;
   font-family: 'Indie Flower', cursive;
+  text-shadow: 1px 0 #232931;
 }
 
 img {
@@ -34,7 +35,7 @@ img {
 
 footer {
   margin-top: 5%;
-  color: #EEEEEE;
+  color: #51c2d5;
   text-align: center;
   font-family: 'Indie Flower', cursive;
 
